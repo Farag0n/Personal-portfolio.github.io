@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <!--Estas son las etiquetas esenciales para un head de HTML-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="personal portfolio" content="personal portfolio of Miguel Angarita with Html and Css">
+        <meta name="keywords" content="Riwi, work, portfolio">
+        <link rel="stylesheet" href="style.css">
+        <title>Miguel Angel Angarita - portafolio personal</title>
+    </head>
+
+    <!--Nota: Usar una mejor semantica en el body con las respectivas etiquetas de contenedo-->
+    <body>
+
+        <!--Barra de navegacion fuera del hader para que se vea en toda la pagina-->
+        <nav class="nav-bar">
+            <a href="#home">Inicio</a>
+            <a href="#about-me">Sobre mi</a>
+            <a href="#proyects">Proyectos</a>
+            <a href="#contact-me">Contacto</a>
+        </nav>
+
+        <header id ="home">
+            <section>
+                <!--Foto y nombre-->
+                <nav class="picture-name">
+                    <img src="/assets/profile-picture.jpeg" alt="Foto de Miguel Angarita con un martillo y una oz" width="450">
+                    <h1>Miguel Angel Angarita</h1>
+                </nav>
+            </section>
+        </header>
+
+        <main class="information">
+            <!--info sobre mi-->
+            <section id ="about-me">
+                <h2>Quien soy?</h2>
+                <p>Soy coder de Riwi y actualmente estoy aprendiendo programacion y robotica<br>de manera auto didacta, me gusta mas el back pero no me molesta el front</p>
+                <p>y me gustaria poder aprender de lenguajes de bajo nivel y lenguaje ensamblador<br>para porder hacer mi propia distro de Linux,programas y drivers</p>
+                
+                <nav class ="skills">
+                    <h3>Habilidades blandas</h3>
+                        <ul>
+                            <li>Manejo de estres</li>
+                            <li>Control de crisis</li>
+                            <li>Comunicacion asertiva</li>
+                        </ul>
+
+                    <h3>Habilidades tecnicas</h3>
+                    <ul>
+                        <li>Conocimientos bacicos de Python</li>
+                        <li>Manejo muy basico de Git y GitHub</li>
+                        <li>Conocimientos bacicos de C++</li>
+                        <li>Iniciando con HTML y CSS</li>
+                        <li>Manejo basico del IDE de Arduino</li>
+                    </ul>
+
+                    <h3>lenguajes Y tecnologias</h3>
+                    <ul>   
+                        <img src="/assets/Python.png" alt="Logo del lenguaje Python" width="150">
+                        <img src="/assets/C++.png" alt="Logo del lenguaje C++" width="150">
+                        <img src="/assets/Arduino.png" alt="Logo de la marca de micro controladores Arduino" width="150">
+                        <img src="/assets/HTML5.png" alt="Logo del lenguaje de etiquetado HTML" width="150">
+                        <img src="/assets/CSS3.png" alt="Logo del lenguje CSS" width="150">
+                        <img src="/assets/Git.png" alt="Logo del software de control de versiones Git" width="150">
+                        <img src="/assets/GitHub.png" alt="Logo de la plataforma web para alojar proyectos de software GitHub" width="150">
+                    </ul>
+                </nav>
+            </section>
+
+            <section id ="proyects">
+                 <h2>Proyectos:</h2>
+                    <p>Python API</p>
+                    <img src="/assets/proyec_api.png" alt="Codigo en Python donde se llama a una API que da informacion climatica" width="300">
+
+                    <p>Systema de facturacion en python</p>
+                    <img src="/assets/proyect_systemfacturation.png" alt="Codigo en Python para un systema de facturacion desde terminal" width="300">
+
+                    <p>Systema de promedio en Python</p>
+                    <img src="/assets/proyect_promedio_code.png" alt="Codigo en Python para un systema que permite obtener el promedio de las calificaciones ingresadas" width="300">
+                    <p>Menu en terminal</p>
+                    <img src="/assets/proyect_promedio_menu.png" alt="Menu en terminal del systema de promedio" width="300">
+                    
+                    <p>Systema de administracion de inventario en Python</p>
+                    <img src="/assets/codigo_system_product_admin.gif" alt="Codigo del systema de administacion de productos en python" width="300">
+                    <p>Menu en terminal</p>
+                    <img src="/assets/admin_inventory_menu.png" alt="Menu en terminal del systema de administracion en terminal" width="300">
+            </section>
+
+            <footer id="contact-me">
+                <img src="assets/guardian.png" alt="Imagen de un robot" width="150">
+                <nav id="contact-information">
+                    <h3>Informacion de contacto:</h3>
+                    <table>
+                        <tr>
+                            <td> Numero: 304 340 6564</td>
+                        </tr>
+                        <tr>
+                            <td> WhatsApp, <a href="https://wa.me/+573043406564" target="_blank">Escribeme</a></td>
+                        </tr>
+                        <tr>
+                            <td> Correo:, <a href="miguelanga1604@gmail.com" target="_blank">Contactame</a></td>
+                        </tr>
+                        <tr>
+                            <td> GitHub:,  <a href="https://github.com/Farag0n" target="_blank">Visita mi perfil</a></td>
+                        </tr>
+                    </table>
+
+                    <nav id="contact-form">
+                        <form action="/send" method="post">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <input type="submit" value="Send">
+                        </form>
+                    </nav>
+
+            </footer>
+
+        </main>
+    </body>
+
+</html>
