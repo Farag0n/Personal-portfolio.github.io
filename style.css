@@ -27,7 +27,7 @@ h2 {
 
 /* Enlaces de navegación */
 .nav-bar a {
-    color: #d17224; /* Color naranja para los enlaces */
+    color: #3bd8e4; /* Color naranja para los enlaces */
     text-decoration: none; /* Sin subrayado */
     margin: 0 15px; /* Margen horizontal para separar los enlaces */
     font-weight: bold; /* Texto en negrita para destacar */
@@ -38,7 +38,7 @@ h2 {
 
 /* Hover */
 .nav-bar a:hover {
-    background-color: #e0853b; /* Cambia el fondo a naranja claro al pasar el cursor */
+    background-color: #06787c; /* Cambia el fondo a naranja claro al pasar el cursor */
     color: white; /* Cambia el color del texto a blanco para contraste */
 }
 
