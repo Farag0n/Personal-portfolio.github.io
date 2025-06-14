@@ -10,10 +10,13 @@ body {
     color: rgb(0, 0, 0); /* Color negro para el texto por defecto */
 }
 
+/* Se elije el tamano de los subtitulos h2 */
 h2 {
     font-size: xx-large; /* Tamaño muy grande para los encabezados h2 */
 }
 
+
+/* === Body ==== */
 /* === Barra de navegación fija y estilizada === */
 .nav-bar {
     background-color: #08799e; /* Color de fondo azul intenso para la barra */
@@ -22,12 +25,14 @@ h2 {
     text-align: center; /* Centra el texto (y los enlaces) horizontalmente */
     margin-bottom: 20px; /* Espacio debajo de la barra (aunque no se verá si es sticky) */
     position: sticky; /* Hace que la barra se quede fija en la parte superior al hacer scroll */
+    z-index: 99; /* Solo funciona si en el contenedor previamente se uso el (position: algo)
+    y el z-index fija el contenedor en una capa, tipo canva y entre mayor sea el numero esta en una capa superior */
     top: 0; /* Posición fija en el tope de la ventana */
 }
 
 /* Enlaces de navegación */
 .nav-bar a {
-    color: #3bd8e4; /* Color naranja para los enlaces */
+    color: #3bd8e4; /* Color azul para los enlaces */
     text-decoration: none; /* Sin subrayado */
     margin: 0 15px; /* Margen horizontal para separar los enlaces */
     font-weight: bold; /* Texto en negrita para destacar */
@@ -42,11 +47,13 @@ h2 {
     color: white; /* Cambia el color del texto a blanco para contraste */
 }
 
+/* === Header === */
+
 /* Imagen de perfil y nombre */
 .picture-name {
     text-align: center; /* Centra el contenido */
-    margin-top: 50px; /* Espacio arriba */
-    margin-bottom: 80px; /* Espacio abajo */
+    margin-top: 80px; /* Espacio arriba */
+    margin-bottom: 40px; /* Espacio abajo */
 }
 
 .picture-name img {
@@ -54,8 +61,8 @@ h2 {
     height: 250px; /* Alto fijo para que sea cuadrada */
     object-fit: cover; /* Corta la imagen para que encaje sin deformarse */
     border-radius: 50%; /* Hace que la imagen sea un círculo perfecto */
-    border: 4px solid #013c50; /* Borde azul oscuro alrededor de la imagen */
-    box-shadow: 0 4px 10px rgba(3, 143, 15, 0.3); /* Sombra verde tenue para profundidad */
+    border: 4px solid #000102; /* Borde negro alrededor de la imagen */
+    box-shadow: 3px 6px 12px rgba(115, 250, 205, 0.9); /* Sombra morada tenue para profundidad */
     margin-bottom: 15px; /* Espacio debajo de la imagen */
 }
 
@@ -65,6 +72,7 @@ h2 {
     margin: 0; /* Sin margen para que quede pegado a la imagen */
 }
 
+/* === Main === */
 /* Acerca de mí */
 #about-me {
     text-align: center; /* Centra todo el contenido del "Sobre mí" */
@@ -74,11 +82,36 @@ h2 {
     margin: 0px; /* Esta línea sobrescribe el margin anterior, elimina margen (podría eliminarse) */
     display: contents; /* Hace que el section no cree un contenedor visual, solo sus hijos se muestran */
     font-size: x-large; /* Texto más grande */
-    margin-bottom: 80px; /* Espacio inferior grande */
+    margin-bottom: 100px; /* Espacio inferior grande */
 }
 
 #about-me {
-  scroll-margin-top: 100px; /* Cuando se navega con ancla, deja un espacio de 100px desde arriba (útil para nav fija) */
+    display: block; /* Hace que el elemento se comporte como un bloque, ocupando todo el ancho disponible. Aunque por defecto <section> ya es block. */    
+    scroll-margin-top: 100px; /* Deja un espacio de 100px desde la parte superior al navegar con enlaces internos (anclas), útil si el navbar es fijo. */
+    text-align: center; /* Centra horizontalmente todo el contenido de texto dentro de este bloque. */
+    max-width: 900px; /* Limita el ancho máximo del contenedor a 900px, para que no se extienda demasiado en pantallas grandes. */    
+    margin: 0 auto 100px; /* 
+       - 0: sin margen arriba,
+       - auto: centra horizontalmente el contenedor,
+       - 100px: deja un espacio abajo para separar visualmente de la siguiente sección. */
+    padding: 20px; /* Añade espacio interno de 20px alrededor del contenido para que no esté pegado a los bordes. */
+    font-size: x-large; /* Aumenta el tamaño de fuente del contenido para mejor legibilidad. */
+}
+
+.description {
+    margin-bottom: 60px; /* Añade un espacio de 60 píxeles debajo del elemento con clase "description", para separar visualmente del contenido siguiente. */
+    margin-top: 0; /* Elimina cualquier espacio por encima del elemento, dejando el margen superior en cero. */
+}
+
+/* Estilos aplicados al encabezado h2 dentro de la sección #about-me */
+#about-me h2 {
+  margin-bottom: 20px; /* Agrega 20 píxeles de espacio debajo del título para separarlo del siguiente contenido. */
+  margin-top: 80px; /* Deja un espacio de 80 píxeles por encima del título para alejarlo del contenido anterior o del borde del contenedor. */
+}
+
+#home {
+  scroll-margin-top: 100px;  /* Ajusta el margen superior virtual cuando se hace scroll hacia este elemento con navegación interna (anclas),
+                                para que no quede oculto debajo de una barra de navegación fija, por ejemplo. */
 }
 
 /* Habilidades */
@@ -88,6 +121,7 @@ h2 {
     margin-bottom: 80px; /* Espacio abajo para separar de otros elementos */
 }
 
+/* imagenes de la lista */
 .skills ul img {
     margin: 10px; /* Margen alrededor de las imágenes */
     vertical-align: middle; /* Alinea verticalmente en el medio con texto */
@@ -134,7 +168,7 @@ h2 {
 
 /* === Footer y formulario de contacto === */
 #contact-me {
-    background-color: #000; /* Fondo negro para el pie de página */
+    background-color: rgba(0, 0, 0, 0.80); /* Fondo negro para el pie de página */
     color: #fff; /* Texto blanco */
     padding: 40px 20px; /* Espaciado amplio */
     text-align: center; /* Centra todo el contenido */
@@ -176,6 +210,8 @@ h2 {
     color: #00d0ff; /* Color azul celeste para los enlaces */
     text-decoration: none; /* Sin subrayado */
 }
+#contact-form input[type="text"],
+#contact-form input[type="email"],
 
 #contact-information a:hover {
     text-decoration: underline; /* Subrayado al pasar el cursor */
@@ -184,55 +220,56 @@ h2 {
 
 /* === FORMULARIO === */
 #contact-form {
-    width: 100%;
-    max-width: 500px;
-    background-color: rgba(0, 0, 0, 0.7); 
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
-    text-align: left;
-    color: #f0f0f0; 
+    width: 100%; /* El formulario ocupará todo el ancho disponible del contenedor padre */
+    max-width: 500px; /* Pero no se estirará más allá de 500px, útil para mantener un diseño centrado */
+    background-color: #08799e;  /* Color de fondo azul profundo (como el océano tras una batalla) */
+    padding: 30px; /* Espaciado interno de 30px en todos los lados: aire para que respire el contenido */
+    border-radius: 15px; /* Bordes redondeados: toque estético y suave al tacto visual */
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); /* Sombra blanca muy tenue, efecto flotante */
+    text-align: left; /* Alineación del texto hacia la izquierda, para mayor legibilidad */
+    color: #dad4d4;  /* Color claro para el texto dentro del contenedor */
 }
 
 #contact-form form {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Se activa el modelo de caja flexible */
+    flex-direction: column; /* Organiza todos los elementos hijos en una columna vertical */
 }
 
 #contact-form label {
-    font-weight: bold;
-    margin-top: 15px;
-    color: #f0f0f0;
+    font-weight: bold; /* Texto del label en negrita para mayor visibilidad */
+    margin-top: 15px; /* Espacio superior antes de cada etiqueta */
+    color: #d1caca; /* Color claro con un tono cálido: estilo armonioso con el fondo */
 }
 
 #contact-form input[type="text"],
 #contact-form input[type="email"],
+
 #contact-form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #000;
-    font-size: 1rem;
+    padding: 10px; /* Espacio interior para que el texto no quede pegado a los bordes */
+    margin-top: 5px; /* Espacio entre el label y el campo */
+    border: none; /* Se eliminan los bordes por defecto del navegador */
+    border-radius: 5px; /* Bordes suavemente redondeados: confort visual */
+    background-color: #fff; /* Fondo blanco: contraste con el azul del contenedor */
+    color: #000; /* Texto en negro: legibilidad ante todo */
+    font-size: 1rem; /* Tamaño de fuente estándar y accesible */
 }
 
 #contact-form textarea {
-    resize: vertical;
+    resize: vertical; /* Permite redimensionar solo en dirección vertical, no horizontal */
 }
 
 #contact-form input[type="submit"] {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #ccc;
-    color: #000;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Espacio antes del botón para separarlo de los campos */
+    padding: 10px; /* Espaciado interno cómodo para hacer clic */
+    background-color: #ccc; /* Color gris claro por defecto */
+    color: #000; /* Texto en negro para contraste */
+    font-weight: bold; /* Texto fuerte y visible en el botón */
+    border: none; /* Sin bordes visibles */
+    border-radius: 8px; /* Bordes redondeados para el botón */
+    cursor: pointer; /* Cambia el cursor a mano al pasar por encima: indica interactividad */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color al hacer hover */
 }
 
 #contact-form input[type="submit"]:hover {
-    background-color: #eee;
+    background-color: #eee; /* Al pasar el mouse, el fondo se aclara para una respuesta visual */
 }
