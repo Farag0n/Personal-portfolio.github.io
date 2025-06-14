@@ -42,4 +42,7 @@ La información de contacto usa tablas.
 El formulario de contacto esta centrado y no se ve mal.
 
 ### Vistazo a la pagina:
-
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
