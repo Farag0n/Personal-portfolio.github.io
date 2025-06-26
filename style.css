@@ -2,7 +2,7 @@
 body {
     margin: 0; /* Elimina el margen predeterminado del navegador para que el contenido ocupe todo el ancho */
     padding: 0; /* Elimina el padding predeterminado */
-    background-image: url('/assets/wallpaper_page.jpg'); /* Imagen de fondo para toda la página */
+    background-image: url('./assets/wallpaper_page.jpg'); /* Imagen de fondo para toda la página */
     background-size: cover; /* La imagen se escala para cubrir todo el área visible sin distorsión */
     background-position: center; /* Centra la imagen de fondo */
     background-attachment: fixed; /* Fija la imagen para que no se mueva al hacer scroll */
